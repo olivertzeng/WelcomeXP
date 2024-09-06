@@ -7,20 +7,18 @@
  * Include tahoma.ttf in the fonts directory
  * to make everything more authentic.
  */
-@font-face
-{
-    font-family: "Tahoma";
-    src: url("../fonts/tahoma.ttf");
+@font-face {
+    font-family: "Noto Serif TC";
+    src: url("../fonts/NotoSerifCJK-Regular.ttc");
 }
 
 /*
  * Include tahomabd.ttf in the fonts directory
  * to display bold fonts correctly.
  */
-@font-face
-{
-    font-family: "Tahoma Bold";
-    src: url("../fonts/tahomabd.ttf");
+@font-face {
+    font-family: "Noto Serif TC Bold";
+    src: url("../fonts/NotoSerifCJK-Bold.ttc");
 }
 
 /*
@@ -28,14 +26,12 @@
  * in the fonts directory to display the correct
  * welcome screen font.
  */
-@font-face
-{
-    font-family: "Franklin Gothic Demi Italic";
-    src: url("../fonts/FRADMIT.TTF");
+@font-face {
+    font-family: "Noto Serif TC Italic";
+    src: url("../fonts/NotoSerifCJK-Regular.ttc");
 }
 
-:root
-{
+:root {
     /* Primary Background */
     --primary-bg: #5A7EDC;
 
@@ -138,7 +134,7 @@
     --footer-content-margin-top: 20px;
 
     /* Primary Font */
-    --primary-font-family:'Tahoma', Tahoma, sans-serif;
+    --primary-font-family: 'Tahoma', Tahoma, sans-serif;
     --primary-font-size: 18px;
     --primary-font-color: white;
 
@@ -146,8 +142,7 @@
     --message-font-size: 12px;
 }
 
-body
-{
+body {
     /* Prevent Text Selection & Text Cursor */
     -webkit-user-select: none;
     user-select: none;
@@ -165,8 +160,7 @@ body
     text-shadow: 0px 0px var(--primary-font-color);
 }
 
-#main-content
-{
+#main-content {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -178,8 +172,7 @@ body
     grid-template-rows: var(--header-height) var(--stripe-height) auto var(--stripe-height) var(--footer-height);
 }
 
-#header
-{
+#header {
     /* Positioning */
     grid-row: 1;
     width: 100%;
@@ -188,37 +181,33 @@ body
     background-color: var(--header-bg);
 }
 
-#headerStripe
-{
+#headerStripe {
     /* Positioning */
     grid-row: 2;
     width: 100%;
     height: 100%;
     /* Color */
     background: linear-gradient(45deg, var(--header-stripe-0),
-        var(--header-stripe-1), var(--header-stripe-2), var(--header-stripe-3));
+            var(--header-stripe-1), var(--header-stripe-2), var(--header-stripe-3));
 }
 
-#logo
-{
+#logo {
     width: var(--logo-size);
 }
 
-#text-under-logo
-{
+#text-under-logo {
     display: block;
     margin: var(--logo-text-gap) calc(var(--logo-size) * 0.165) 0 0;
 }
 
-#center
-{
+#center {
     /* Positioning */
     grid-row: 3;
     width: 100%;
     min-height: 0;
     /* Color */
     background: radial-gradient(circle at 5% 5%, var(--radial-gradient-inner) 0,
-        var(--radial-gradient-mid) 6%, var(--radial-gradient-outer) 12%);
+            var(--radial-gradient-mid) 6%, var(--radial-gradient-outer) 12%);
     /* Child Positioning */
     display: flex;
     flex-direction: row;
@@ -231,35 +220,31 @@ body
  * yet correctly supported by the webkit
  * version included in the lighdm package.
  */
-#center > *
-{
+#center>* {
     margin-right: 2%;
 }
-#center > *:last-child
-{
+
+#center>*:last-child {
     margin-right: 0;
 }
 
-#centerLeft
-{
+#centerLeft {
     /* Positioning */
     flex: 1 1 0px;
     /* Child Positioning */
     text-align: end;
 }
 
-#centerDivider
-{
+#centerDivider {
     /* Size */
     width: var(--center-divider-width);
     height: var(--center-divider-height);
     /* Color */
     background: linear-gradient(180deg, var(--center-divider-outer),
-        var(--center-divider-inner), var(--center-divider-outer));
+            var(--center-divider-inner), var(--center-divider-outer));
 }
 
-#centerRight
-{
+#centerRight {
     /* Positioning */
     height: 100%;
     flex: 1 1 0px;
@@ -271,8 +256,7 @@ body
     overflow: auto;
 }
 
-#userListings
-{
+#userListings {
     margin: auto 0;
 }
 
@@ -281,28 +265,25 @@ body
  * yet correctly supported by the webkit
  * version included in the lighdm package.
  */
-#userListings > *
-{
+#userListings>* {
     margin-bottom: 15px;
 }
-#userListings > *:last-child
-{
+
+#userListings>*:last-child {
     margin-bottom: 0;
 }
 
-#footerStripe
-{
+#footerStripe {
     /* Positioning */
     grid-row: 4;
     width: 100%;
     height: 100%;
     /* Color */
     background: linear-gradient(45deg, var(--footer-stripe-0),
-        var(--footer-stripe-1), var(--footer-stripe-2), var(--footer-stripe-3));
+            var(--footer-stripe-1), var(--footer-stripe-2), var(--footer-stripe-3));
 }
 
-#footer
-{
+#footer {
     /* Positioning */
     grid-row: 5;
     width: 100%;
@@ -315,43 +296,36 @@ body
     align-items: start;
 }
 
-#footer > *
-{
+#footer>* {
     margin: var(--footer-content-margin-top) var(--footer-content-margin-side) 0 var(--footer-content-margin-side);
 }
 
-#shutdown-group:hover
-{
+#shutdown-group:hover {
     cursor: pointer;
 }
 
-#shutdown-group:hover > span
-{
+#shutdown-group:hover>span {
     text-decoration: underline;
 }
 
-#shutdown-options
-{
+#shutdown-options {
     height: var(--image-button-size);
     box-shadow: 2px 2px 0 var(--shadow-color);
 }
 
-#account-message
-{
+#account-message {
     font: var(--message-font-size) var(--primary-font-family);
 }
 
 /* User Profile */
-.user-border-wrapper
-{
+.user-border-wrapper {
     width: var(--user-listing-width);
     background: linear-gradient(90deg, white, var(--primary-bg) 80%);
     border-radius: var(--profile-picture-border-radius);
     padding: 1px;
 }
 
-.profile-picture-wrapper
-{
+.profile-picture-wrapper {
     background-color: var(--profile-picture-border-normal);
     border-radius: var(--profile-picture-border-radius);
     width: var(--profile-picture-size);
@@ -360,21 +334,19 @@ body
     box-shadow: 1px 1px 2px var(--shadow-color);
 }
 
-.user:hover .profile-picture-wrapper, .user.active .profile-picture-wrapper
-{
+.user:hover .profile-picture-wrapper,
+.user.active .profile-picture-wrapper {
     background-color: var(--profile-picture-border-inner);
     box-shadow: 1px 1px 2px var(--shadow-color), inset 0 0 1px 1px var(--profile-picture-border-outer);
 }
 
-.profile-picture
-{
+.profile-picture {
     width: var(--profile-picture-size);
     height: var(--profile-picture-size);
     object-fit: cover;
 }
 
-.user
-{
+.user {
     position: relative;
     background-color: var(--primary-bg);
     outline: 1px solid var(--primary-bg);
@@ -384,29 +356,24 @@ body
     gap: var(--user-listing-horizontal-gap);
 }
 
-.user > *
-{
-	transition: 0.5s;
-	transition-property: opacity;
+.user>* {
+    transition: 0.5s;
+    transition-property: opacity;
 }
 
-#centerRight:hover .user:not(.active) > *
-{
-	opacity: 50%;
+#centerRight:hover .user:not(.active)>* {
+    opacity: 50%;
 }
 
-#centerRight:hover .user:not(.active):hover > *
-{
-	opacity: 100%;
+#centerRight:hover .user:not(.active):hover>* {
+    opacity: 100%;
 }
 
-.user:hover
-{
+.user:hover {
     cursor: pointer;
 }
 
-.user.active
-{
+.user.active {
     flex: 1 1 0px;
     outline: 1px solid transparent;
     border-right: 0;
@@ -416,8 +383,7 @@ body
     background: linear-gradient(90deg, var(--user-listing-0), var(--user-listing-1));
 }
 
-.password-box
-{
+.password-box {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -430,17 +396,15 @@ body
  * yet correctly supported by the webkit
  * version included in the lighdm package.
  */
-.password-box > *
-{
+.password-box>* {
     margin-bottom: 4px;
 }
-.password-box > *:last-child
-{
+
+.password-box>*:last-child {
     margin-bottom: 0;
 }
 
-.password
-{
+.password {
     box-shadow: 2px 2px 0 var(--shadow-color);
     outline: none;
     border: none;
@@ -454,8 +418,7 @@ body
     height: var(--password-entry-height);
 }
 
-.password-form
-{
+.password-form {
     visibility: hidden;
     display: flex;
     flex-direction: row;
@@ -468,27 +431,23 @@ body
  * yet correctly supported by the webkit
  * version included in the lighdm package.
  */
-.password-form > *
-{
+.password-form>* {
     margin-right: 5px;
 }
-.password-form > *:last-child
-{
+
+.password-form>*:last-child {
     margin-right: 0;
 }
 
-.password-form .img-button
-{
+.password-form .img-button {
     height: var(--image-button-size);
 }
 
-.user.active .password-form
-{
+.user.active .password-form {
     visibility: visible;
 }
 
-.password-msg
-{
+.password-msg {
     margin-left: var(--password-entry-offset);
     visibility: hidden;
     font-size: var(--message-font-size);
@@ -496,13 +455,11 @@ body
     text-shadow: none;
 }
 
-.user.active .password-msg
-{
+.user.active .password-msg {
     visibility: visible;
 }
 
-.password-error-popup
-{
+.password-error-popup {
     visibility: hidden;
     z-index: 2;
     position: absolute;
@@ -516,13 +473,11 @@ body
     width: max-content;
 }
 
-.password-error-popup.active
-{
+.password-error-popup.active {
     visibility: visible;
 }
 
-.popup-arrow-border
-{
+.popup-arrow-border {
     position: absolute;
     width: 0;
     height: 0;
@@ -532,8 +487,7 @@ body
     margin: calc(0px - var(--popup-arrow-border-size) - var(--popup-padding)) 0 0 var(--popop-arrow-position);
 }
 
-.popup-arrow
-{
+.popup-arrow {
     position: absolute;
     width: 0;
     height: 0;
@@ -543,48 +497,40 @@ body
     margin: calc(var(--popup-border-size) * 2) var(--popup-border-size) 0px var(--popup-border-size);
 }
 
-.password-error-title
-{
+.password-error-title {
     font-family: "Tahoma Bold", "Tahoma", sans-serif;
     margin-bottom: 4px;
 }
 
-.password-error-icon
-{
+.password-error-icon {
     height: var(--message-font-size);
 }
 
-.img-button
-{
+.img-button {
     vertical-align: middle;
 }
 
-.img-button:hover
-{
+.img-button:hover {
     filter: brightness(1.25);
 }
 
-.img-button:active
-{
-    filter:brightness(0.5);
+.img-button:active {
+    filter: brightness(0.5);
 }
 
-#password-entry-button 
-{
+#password-entry-button {
     margin-left: var(--password-entry-button-margin);
     box-shadow: 2px 2px 0 var(--shadow-color);
 }
 
-#welcome
-{
+#welcome {
     font-family: "Franklin Gothic Demi Italic", sans-serif;
     font-size: 50px;
     text-shadow: 2px 2px 0 var(--shadow-color);
     margin: auto 0;
 }
 
-#shutdown-prompt-overlay
-{
+#shutdown-prompt-overlay {
     display: none;
     position: absolute;
     width: 100%;
@@ -592,14 +538,12 @@ body
     background-color: rgba(64, 64, 64, 0.1);
 }
 
-#shutdown-prompt-overlay.active
-{
+#shutdown-prompt-overlay.active {
     display: flex;
     justify-content: center;
 }
 
-#shutdown-prompt
-{
+#shutdown-prompt {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, var(--shutdown-prompt-bg-0), var(--shutdown-prompt-bg-1), var(--shutdown-prompt-bg-0));
@@ -609,8 +553,7 @@ body
     margin-top: 26vh;
 }
 
-#shutdown-prompt-header
-{
+#shutdown-prompt-header {
     width: 100%;
     height: var(--shutdown-header-height);
     background-color: var(--header-bg);
@@ -620,31 +563,26 @@ body
     align-items: center;
 }
 
-#shutdown-prompt-header > *:first-child
-{
+#shutdown-prompt-header>*:first-child {
     margin-left: 10px;
 }
 
-#shutdown-prompt-header > *:last-child
-{
+#shutdown-prompt-header>*:last-child {
     margin-right: 10px;
 }
 
-#logo-small
-{
+#logo-small {
     height: 65%;
 }
 
-#shutdown-prompt-header-stripe
-{
+#shutdown-prompt-header-stripe {
     width: 100%;
     height: var(--stripe-height);
     background: linear-gradient(45deg, var(--header-stripe-0),
-        var(--header-stripe-1), var(--header-stripe-2), var(--header-stripe-3));
+            var(--header-stripe-1), var(--header-stripe-2), var(--header-stripe-3));
 }
 
-#shutdown-prompt-options
-{
+#shutdown-prompt-options {
     font-size: var(--shutdown-prompt-option-font-size);
     flex-grow: 1;
     display: flex;
@@ -653,25 +591,22 @@ body
     align-items: center;
 }
 
-.shutdown-prompt-option
-{
+.shutdown-prompt-option {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.shutdown-prompt-option > *:first-child
-{
+
+.shutdown-prompt-option>*:first-child {
     margin-bottom: 8px;
 }
 
-.shutdown-prompt-option .img-button
-{
+.shutdown-prompt-option .img-button {
     height: var(--shutdown-option-button-size);
 }
 
-#shutdown-prompt-footer
-{
+#shutdown-prompt-footer {
     width: 100%;
     height: var(--shutdown-header-height);
     background-color: var(--header-bg);
@@ -681,76 +616,67 @@ body
     align-items: center;
 }
 
-#shutdown-prompt-footer > *:last-child
-{
+#shutdown-prompt-footer>*:last-child {
     margin-right: 10px;
 }
 
-#shutdown-cancel-button-outline
-{
+#shutdown-cancel-button-outline {
     width: min-content;
     height: min-content;
     padding: 1px;
     border-radius: 2px;
     background: linear-gradient(170deg, var(--button-outline-1) 35%,
-        var(--button-outline-2));
+            var(--button-outline-2));
 }
 
-#shutdown-cancel-button-border
-{
+#shutdown-cancel-button-border {
     width: min-content;
     height: min-content;
     padding: 1px;
     border: solid 1px var(--button-border);
     border-radius: 3px;
     background: linear-gradient(var(--button-normal-border-1),
-        var(--button-normal-border-2));
+            var(--button-normal-border-2));
 }
 
-#shutdown-cancel-button-border:hover
-{
+#shutdown-cancel-button-border:hover {
     background: linear-gradient(var(--button-hover-border-1),
-        var(--button-hover-border-2));
+            var(--button-hover-border-2));
 }
 
-#shutdown-cancel-button-border:active
-{
+#shutdown-cancel-button-border:active {
     background: linear-gradient(var(--button-select-border-1),
-        var(--button-select-border-2));
+            var(--button-select-border-2));
 }
 
-#shutdown-cancel-button
-{
+#shutdown-cancel-button {
     color: black;
     font-size: var(--shutdown-prompt-option-font-size);
     outline: none;
     border: none;
     padding: 0px 8px 0px 8px;
     background: linear-gradient(180deg, var(--button-background-1),
-        var(--button-background-2) 90%, var(--button-background-3) 95%);
+            var(--button-background-2) 90%, var(--button-background-3) 95%);
     /* Disable "sort-of-bold" text shadow hack */
     text-shadow: none;
 }
 
-@keyframes grayFadeIn
-{
-	0%
-    {
-		filter: grayscale(0);
-	}
-	15%
-    {
-		filter: grayscale(0);
-	}
-	100%
-    {
-		filter: grayscale(0.90);
-	}
+@keyframes grayFadeIn {
+    0% {
+        filter: grayscale(0);
+    }
+
+    15% {
+        filter: grayscale(0);
+    }
+
+    100% {
+        filter: grayscale(0.90);
+    }
 }
 
-.grayscale
-{
-	animation: grayFadeIn 5s;
-	animation-fill-mode: forwards;
-	animation-timing-function: steps(16, end);
+.grayscale {
+    animation: grayFadeIn 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(16, end);
 }
